@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simpsons Kitchen
+* source:	https://sketchfab.com/3d-models/simpsons-kitchen-806d662602a74361ba33c896281bf594
+* author:	Prams (https://sketchfab.com/Prams)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simpsons Kitchen" (https://sketchfab.com/3d-models/simpsons-kitchen-806d662602a74361ba33c896281bf594) by Prams (https://sketchfab.com/Prams) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
