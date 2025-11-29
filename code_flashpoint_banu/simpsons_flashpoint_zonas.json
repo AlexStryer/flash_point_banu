@@ -1,0 +1,5727 @@
+{
+  "turnos": [
+    {
+      "turno": 0,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 1,
+          "y": 5,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 5,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 6,
+          "zona": 1,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 2,
+          "zona": 1,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 4,
+          "y": 0,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 4,
+          "y": 1,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [
+        {
+          "x": 1,
+          "y": 2,
+          "nivel": 2
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "nivel": 2
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "nivel": 2
+        }
+      ],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 2
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 5,
+          "y": 1
+        },
+        {
+          "x": 6,
+          "y": 1
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": 0,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": 2,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": 1,
+          "y": 4,
+          "estado": "viva"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 1,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 1,
+          "y": 4,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 4,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 5,
+          "zona": 1,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 3,
+          "zona": 1,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 4,
+          "y": 1,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 5,
+          "y": 1,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [
+        {
+          "x": 1,
+          "y": 2,
+          "nivel": 2
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "nivel": 2
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "nivel": 2
+        }
+      ],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 2
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 1
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": 0,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": 2,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": 1,
+          "y": 4,
+          "estado": "viva"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 2,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 1,
+          "y": 3,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 3,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 4,
+          "zona": 1,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 3,
+          "zona": 1,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 4,
+          "y": 2,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 6,
+          "y": 1,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [
+        {
+          "x": 1,
+          "y": 2,
+          "nivel": 2
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "nivel": 2
+        }
+      ],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 2
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": 0,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": 2,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": 1,
+          "y": 4,
+          "estado": "viva"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 3,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 1,
+          "y": 2,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 2,
+          "zona": 0,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 4,
+          "y": 3,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 6,
+          "y": 2,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [
+        {
+          "x": 7,
+          "y": 4,
+          "nivel": 2
+        }
+      ],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 2
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": 0,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": 1,
+          "y": 4,
+          "estado": "viva"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 4,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 1,
+          "y": 3,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 3,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 4,
+          "y": 4,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 6,
+          "y": 3,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [
+        {
+          "x": 7,
+          "y": 4,
+          "nivel": 2
+        }
+      ],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 2
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": 0,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": 1,
+          "y": 4,
+          "estado": "viva"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 5,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 1,
+          "y": 4,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 4,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 5,
+          "y": 4,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 7,
+          "y": 3,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [
+        {
+          "x": 7,
+          "y": 4,
+          "nivel": 2
+        }
+      ],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 4
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 6,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 4,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 3,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Bart",
+          "x": 2,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 6,
+          "y": 4,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 7,
+          "y": 4,
+          "zona": 2,
+          "rol": "apagafuegos",
+          "tiene_victima": false
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": 7,
+          "y": 4,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 7,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 3,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 2,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 1,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 6,
+          "y": 5,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Abuelo",
+          "x": 7,
+          "y": 4,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": 7,
+          "y": 5,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 8,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 2,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 1,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 7,
+          "y": 5,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 6,
+          "y": 4,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 9,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 7,
+          "y": 4,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 6,
+          "y": 3,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 10,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 7,
+          "y": 3,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 5,
+          "y": 3,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 7,
+          "y": 2
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 11,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 7,
+          "y": 2,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 5,
+          "y": 2,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 12,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 7,
+          "y": 1,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 4,
+          "y": 2,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 13,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 6,
+          "y": 1,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 3,
+          "y": 2,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 14,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 5,
+          "y": 1,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 3,
+          "y": 1,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 15,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 5,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 1,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 16,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 4,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 17,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 18,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 19,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 20,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 21,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 2,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 22,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 23,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 6,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 24,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 25,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 5,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 26,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        },
+        {
+          "x": 4,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 27,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 4,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 28,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 29,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [
+        {
+          "x": 1,
+          "y": 5
+        }
+      ],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 30,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 31,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 32,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 33,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 34,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 35,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 36,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 3,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 37,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 38,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 4,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 39,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 40,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 5,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 41,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 42,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 43,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 44,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 45,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 46,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 3,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 47,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 2,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 48,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 49,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "turno": 50,
+      "estrategia": "zonas",
+      "bomberos": [
+        {
+          "id": "Homero",
+          "x": 0,
+          "y": 1,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Marge",
+          "x": 0,
+          "y": 0,
+          "zona": 0,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Bart",
+          "x": 1,
+          "y": 0,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Lisa",
+          "x": 1,
+          "y": 6,
+          "zona": 1,
+          "rol": "rescatador",
+          "tiene_victima": false
+        },
+        {
+          "id": "Maggie",
+          "x": 3,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        },
+        {
+          "id": "Abuelo",
+          "x": 2,
+          "y": 0,
+          "zona": 2,
+          "rol": "rescatador",
+          "tiene_victima": true
+        }
+      ],
+      "fuego": [],
+      "humo": [],
+      "victimas": [
+        {
+          "id": "victima_0",
+          "nombre": "Milhouse",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_1",
+          "nombre": "Nelson",
+          "x": 7,
+          "y": 2,
+          "estado": "viva"
+        },
+        {
+          "id": "victima_2",
+          "nombre": "Krusty",
+          "x": -1,
+          "y": -1,
+          "estado": "rescatada"
+        },
+        {
+          "id": "victima_3",
+          "nombre": "Barney",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_4",
+          "nombre": "Lenny",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        },
+        {
+          "id": "victima_5",
+          "nombre": "Carl",
+          "x": -1,
+          "y": -1,
+          "estado": "cargada"
+        }
+      ],
+      "ambulancia": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}
