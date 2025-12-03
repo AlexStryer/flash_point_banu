@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.InputSystem;   // 👈 NEW INPUT SYSTEM
+using UnityEngine.InputSystem;   // New Input System
 
 [Serializable]
 public class TileData
@@ -32,6 +32,21 @@ public class HazardData
 }
 
 [Serializable]
+public class AgentData
+{
+    public int id;
+    public int x;
+    public int y;
+}
+
+[Serializable]
+public class VictimData
+{
+    public int x;
+    public int y;
+}
+
+[Serializable]
 public class FloorResponse
 {
     public int width;
@@ -39,6 +54,10 @@ public class FloorResponse
     public TileData[] tiles;
     public EdgeData[] edges;
     public HazardData[] hazards;
+    public AgentData[] agents;
+    public VictimData[] victims;
+    public bool game_over;
+    public string result;
 }
 
 [Serializable]
@@ -47,6 +66,8 @@ public class StepResponse
     public int width;
     public int height;
     public HazardData[] hazards;
+    public AgentData[] agents;
+    public VictimData[] victims;
     public bool game_over;
     public string result;
 }
@@ -58,13 +79,13 @@ public class FloorLoader : MonoBehaviour
     public string stepUrl = "http://localhost:8585/step";
 
     [Header("Prefabs - Piso")]
-    public GameObject defaultFloorPrefab;   // fallback
+    public GameObject defaultFloorPrefab;
     public GameObject insideFloorPrefab;
     public GameObject outsideFloorPrefab;
     public GameObject kitchenFloorPrefab;
     public GameObject garageFloorPrefab;
-    public GameObject safeFloorPrefab;      // SAFE SPACES
-    public GameObject spawnFloorPrefab;     // SPAWN SPACES
+    public GameObject safeFloorPrefab;
+    public GameObject spawnFloorPrefab;
 
     [Header("Prefabs - Paredes y Puertas")]
     public GameObject wallVerticalPrefab;
@@ -76,6 +97,11 @@ public class FloorLoader : MonoBehaviour
     public GameObject firePrefab;
     public GameObject smokePrefab;
 
+    [Header("Prefabs - Entidades")]
+    public GameObject firefighterPrefab;
+    public GameObject victimPrefab;
+    // (si quieres ambulancia después, la agregas aquí)
+
     [Header("Grid config")]
     public float cellSize = 1f;
     public float yLevel = 0f;
@@ -85,10 +111,13 @@ public class FloorLoader : MonoBehaviour
     public bool mirrorX = true;
     public bool mirrorZ = false;
 
-    // --- Estado interno ---
+    // --- estado interno ---
     int mapWidth;
     int mapHeight;
+
     List<GameObject> activeHazards = new List<GameObject>();
+    Dictionary<int, GameObject> agentObjects = new Dictionary<int, GameObject>();
+    List<GameObject> victimObjects = new List<GameObject>();
 
     void Start()
     {
@@ -97,7 +126,7 @@ public class FloorLoader : MonoBehaviour
 
     void Update()
     {
-        // NEW INPUT SYSTEM: espacio avanza un turno
+        // Avanzar turno con Space usando New Input System
         if (Keyboard.current != null &&
             Keyboard.current.spaceKey.wasPressedThisFrame)
         {
@@ -105,7 +134,7 @@ public class FloorLoader : MonoBehaviour
         }
     }
 
-    // -------- /floor ----------
+    // ----------------- /floor -----------------
     IEnumerator RequestFloorLayout(int seed)
     {
         string bodyJson = "{\"seed\": " + seed + "}";
@@ -139,7 +168,7 @@ public class FloorLoader : MonoBehaviour
         }
     }
 
-    // -------- /step ----------
+    // ----------------- /step -----------------
     IEnumerator RequestStep()
     {
         using (UnityWebRequest www = new UnityWebRequest(stepUrl, "POST"))
@@ -171,6 +200,8 @@ public class FloorLoader : MonoBehaviour
             mapHeight = step.height;
 
             BuildHazardsFromArray(step.hazards);
+            UpdateAgents(step.agents, clearExisting:false);
+            RebuildVictims(step.victims);
 
             if (step.game_over)
             {
@@ -179,23 +210,28 @@ public class FloorLoader : MonoBehaviour
         }
     }
 
+    // -------- build inicial ----------
     void BuildFromResponse(FloorResponse floor)
     {
         mapWidth = floor.width;
         mapHeight = floor.height;
 
-        // limpia todo
+        // Limpia todo lo que cuelga de este objeto
         for (int i = transform.childCount - 1; i >= 0; i--)
             DestroyImmediate(transform.GetChild(i).gameObject);
 
         activeHazards.Clear();
+        agentObjects.Clear();
+        victimObjects.Clear();
 
         BuildTiles(floor);
         BuildEdges(floor);
         BuildHazardsFromArray(floor.hazards);
+        UpdateAgents(floor.agents, clearExisting:true);
+        RebuildVictims(floor.victims);
     }
 
-    // ---------------- PISOS ----------------
+    // ----------------- PISOS -----------------
     void BuildTiles(FloorResponse floor)
     {
         foreach (TileData tile in floor.tiles)
@@ -206,15 +242,10 @@ public class FloorLoader : MonoBehaviour
             int gridX = tile.x;
             int gridY = tile.y;
 
-            if (mirrorX)
-                gridX = (floor.width - 1) - gridX;
-            if (mirrorZ)
-                gridY = (floor.height - 1) - gridY;
+            if (mirrorX) gridX = (floor.width - 1) - gridX;
+            if (mirrorZ) gridY = (floor.height - 1) - gridY;
 
-            float worldX = gridX * cellSize + cellSize * 0.5f;
-            float worldZ = gridY * cellSize + cellSize * 0.5f;
-            Vector3 pos = new Vector3(worldX, yLevel, worldZ) + originOffset;
-
+            Vector3 pos = GridToWorld(gridX, gridY);
             Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
         }
     }
@@ -223,8 +254,12 @@ public class FloorLoader : MonoBehaviour
     {
         switch (type)
         {
-            case "kitchen": if (kitchenFloorPrefab != null) return kitchenFloorPrefab; break;
-            case "garage":  if (garageFloorPrefab  != null) return garageFloorPrefab;  break;
+            case "kitchen":
+                if (kitchenFloorPrefab != null) return kitchenFloorPrefab;
+                break;
+            case "garage":
+                if (garageFloorPrefab != null) return garageFloorPrefab;
+                break;
             case "safe":
                 if (safeFloorPrefab != null) return safeFloorPrefab;
                 if (insideFloorPrefab != null) return insideFloorPrefab;
@@ -243,7 +278,7 @@ public class FloorLoader : MonoBehaviour
         return defaultFloorPrefab;
     }
 
-    // -------------- PAREDES / PUERTAS --------------
+    // ----------------- PAREDES / PUERTAS -----------------
     void BuildEdges(FloorResponse floor)
     {
         if (floor.edges == null) return;
@@ -266,8 +301,8 @@ public class FloorLoader : MonoBehaviour
                 by = (floor.height - 1) - by;
             }
 
-            bool isVerticalEdge = (ax != bx);   // entre celdas izquierda-derecha
-            bool isHorizontalEdge = (ay != by); // entre celdas arriba-abajo
+            bool isVerticalEdge = (ax != bx);
+            bool isHorizontalEdge = (ay != by);
 
             float cx = ((ax + bx) * 0.5f) * cellSize + cellSize * 0.5f;
             float cz = ((ay + by) * 0.5f) * cellSize + cellSize * 0.5f;
@@ -277,12 +312,12 @@ public class FloorLoader : MonoBehaviour
 
             if (e.type == "wall")
             {
-                if (isVerticalEdge && wallVerticalPrefab != null)      prefab = wallVerticalPrefab;
+                if (isVerticalEdge && wallVerticalPrefab != null) prefab = wallVerticalPrefab;
                 else if (isHorizontalEdge && wallHorizontalPrefab != null) prefab = wallHorizontalPrefab;
             }
             else if (e.type == "door")
             {
-                if (isVerticalEdge && doorVerticalPrefab != null)      prefab = doorVerticalPrefab;
+                if (isVerticalEdge && doorVerticalPrefab != null) prefab = doorVerticalPrefab;
                 else if (isHorizontalEdge && doorHorizontalPrefab != null) prefab = doorHorizontalPrefab;
             }
 
@@ -292,39 +327,97 @@ public class FloorLoader : MonoBehaviour
         }
     }
 
-    // -------------- HAZARDS --------------
+    // ----------------- HAZARDS -----------------
     void BuildHazardsFromArray(HazardData[] hazards)
     {
-        // borra los anteriores
         foreach (GameObject go in activeHazards)
             if (go != null) Destroy(go);
         activeHazards.Clear();
 
-        if (hazards == null || hazards.Length == 0)
-            return;
+        if (hazards == null) return;
 
         foreach (HazardData h in hazards)
         {
             GameObject prefab = null;
-            if (h.kind == "fire" && firePrefab != null)      prefab = firePrefab;
+            if (h.kind == "fire" && firePrefab != null) prefab = firePrefab;
             else if (h.kind == "smoke" && smokePrefab != null) prefab = smokePrefab;
-
             if (prefab == null) continue;
 
-            int gridX = h.x;
-            int gridY = h.y;
+            int gx = h.x;
+            int gy = h.y;
+            if (mirrorX) gx = (mapWidth - 1) - gx;
+            if (mirrorZ) gy = (mapHeight - 1) - gy;
 
-            if (mirrorX)
-                gridX = (mapWidth - 1) - gridX;
-            if (mirrorZ)
-                gridY = (mapHeight - 1) - gridY;
-
-            float worldX = gridX * cellSize + cellSize * 0.5f;
-            float worldZ = gridY * cellSize + cellSize * 0.5f;
-            Vector3 pos = new Vector3(worldX, yLevel, worldZ) + originOffset;
-
-            var instance = Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
-            activeHazards.Add(instance);
+            Vector3 pos = GridToWorld(gx, gy);
+            GameObject inst = Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
+            activeHazards.Add(inst);
         }
+    }
+
+    // ----------------- AGENTES -----------------
+    void UpdateAgents(AgentData[] agents, bool clearExisting)
+    {
+        if (clearExisting)
+        {
+            foreach (var kv in agentObjects)
+                if (kv.Value != null) Destroy(kv.Value);
+            agentObjects.Clear();
+        }
+
+        if (agents == null) return;
+
+        foreach (AgentData a in agents)
+        {
+            int gx = a.x;
+            int gy = a.y;
+            if (mirrorX) gx = (mapWidth - 1) - gx;
+            if (mirrorZ) gy = (mapHeight - 1) - gy;
+
+            Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0); // un poco arriba del piso
+
+            GameObject go;
+            if (!agentObjects.TryGetValue(a.id, out go))
+            {
+                if (firefighterPrefab == null) continue;
+                go = Instantiate(firefighterPrefab, pos, firefighterPrefab.transform.rotation, this.transform);
+                agentObjects[a.id] = go;
+            }
+            else
+            {
+                go.transform.position = pos;
+            }
+        }
+    }
+
+    // ----------------- VÍCTIMAS -----------------
+    void RebuildVictims(VictimData[] victims)
+    {
+        foreach (GameObject v in victimObjects)
+            if (v != null) Destroy(v);
+        victimObjects.Clear();
+
+        if (victims == null) return;
+
+        foreach (VictimData v in victims)
+        {
+            if (victimPrefab == null) continue;
+
+            int gx = v.x;
+            int gy = v.y;
+            if (mirrorX) gx = (mapWidth - 1) - gx;
+            if (mirrorZ) gy = (mapHeight - 1) - gy;
+
+            Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0);
+            GameObject inst = Instantiate(victimPrefab, pos, victimPrefab.transform.rotation, this.transform);
+            victimObjects.Add(inst);
+        }
+    }
+
+    // ----------------- Utils -----------------
+    Vector3 GridToWorld(int gx, int gy)
+    {
+        float worldX = gx * cellSize + cellSize * 0.5f;
+        float worldZ = gy * cellSize + cellSize * 0.5f;
+        return new Vector3(worldX, yLevel, worldZ) + originOffset;
     }
 }
