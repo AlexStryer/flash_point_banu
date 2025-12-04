@@ -39,8 +39,6 @@ public class AgentData
     public int id;
     public int x;
     public int y;
-
-    // Opcional: si en tu JSON ya mandas "role" se llenará solo
     public string role;
 }
 
@@ -90,7 +88,6 @@ public class FloorResponse
     public bool game_over;
     public string result;
 
-    // Campos extra que el server manda en /floor (opcionales)
     public int episode;
     public int wins;
     public int losses;
@@ -115,7 +112,6 @@ public class StepResponse
     public bool game_over;
     public string result;
 
-    // Campos extra de multi-episodios y estadísticas
     public int episode;
     public int wins;
     public int losses;
@@ -170,16 +166,12 @@ public class FloorLoader : MonoBehaviour
     public float smokeZOffset = 0f;
 
     [Header("Prefabs - Bomberos (multi-modelo)")]
-    [Tooltip("Prefab default si no quieres usar lista múltiple")]
-    public GameObject firefighterPrefab;                  // fallback
-    [Tooltip("Pon aquí varios modelos: Homero, Marge, Bart, etc.")]
-    public GameObject[] firefighterPrefabs;               // varios modelos
+    public GameObject firefighterPrefab;         // fallback
+    public GameObject[] firefighterPrefabs;      // varios modelos
 
     [Header("Prefabs - Víctimas (multi-skin)")]
-    [Tooltip("Prefab default de víctima")]
-    public GameObject victimPrefab;                       // fallback
-    [Tooltip("Lista de prefabs para víctimas con distintas skins")]
-    public GameObject[] victimPrefabs;                    // varios modelos
+    public GameObject victimPrefab;              // fallback
+    public GameObject[] victimPrefabs;           // varios modelos
 
     [Header("Grid config")]
     public float cellSize = 1f;
@@ -187,8 +179,8 @@ public class FloorLoader : MonoBehaviour
     public Vector3 originOffset = Vector3.zero;
 
     [Header("Walls config")]
-    public float wallHeight = 2f;   // altura visual de pared
-    public float doorHeight = 2f;   // altura visual de puerta
+    public float wallHeight = 2f;
+    public float doorHeight = 2f;
 
     [Header("Walls offset (extra)")]
     public float wallXOffset = 0f;
@@ -210,10 +202,9 @@ public class FloorLoader : MonoBehaviour
 
     List<GameObject> activeHazards = new List<GameObject>();
     Dictionary<int, GameObject> agentObjects = new Dictionary<int, GameObject>();
-    List<GameObject> victimObjects = new List<GameObject>();
+    Dictionary<string, GameObject> victimObjects = new Dictionary<string, GameObject>(); // key = "x_y"
     List<GameObject> activeEdges = new List<GameObject>();
 
-    // flag para dejar de pedir /step cuando ya acabaron todos los episodios
     bool simulationFinished = false;
 
     void Start()
@@ -319,7 +310,6 @@ public class FloorLoader : MonoBehaviour
             UpdateAgents(step.agents, clearExisting: false);
             RebuildVictims(step.victims);
 
-            // Log de stats de simulación / episodios
             Debug.Log($"[STEP] Episodio {step.episode}/{step.max_episodes} - " +
                       $"Wins: {step.wins}, Losses: {step.losses}, Others: {step.others}");
 
@@ -364,12 +354,13 @@ public class FloorLoader : MonoBehaviour
         mapWidth = floor.width;
         mapHeight = floor.height;
 
+        // Volamos todo del hijo
         for (int i = transform.childCount - 1; i >= 0; i--)
             DestroyImmediate(transform.GetChild(i).gameObject);
 
         activeHazards.Clear();
         agentObjects.Clear();
-        victimObjects.Clear();
+        victimObjects.Clear();   // solo limpiamos el diccionario, ya destruimos los GOs con DestroyImmediate
         activeEdges.Clear();
 
         BuildTiles(floor);
@@ -444,8 +435,8 @@ public class FloorLoader : MonoBehaviour
 
             if (mirrorX)
             {
-                ax = (width  - 1) - ax;
-                bx = (width  - 1) - bx;
+                ax = (width - 1) - ax;
+                bx = (width - 1) - bx;
             }
             if (mirrorZ)
             {
@@ -457,7 +448,7 @@ public class FloorLoader : MonoBehaviour
             Vector3 b = GridToWorld(bx, by);
             Vector3 pos = (a + b) * 0.5f;
 
-            bool isVerticalEdge   = (ax != bx);
+            bool isVerticalEdge = (ax != bx);
             bool isHorizontalEdge = (ay != by);
 
             GameObject prefab = null;
@@ -466,7 +457,6 @@ public class FloorLoader : MonoBehaviour
             float yOff = 0f;
             float zOff = 0f;
 
-            // --- PARED ---
             if (e.type == "wall")
             {
                 if (isVerticalEdge && wallVerticalPrefab != null)
@@ -478,7 +468,6 @@ public class FloorLoader : MonoBehaviour
                 xOff = wallXOffset;
                 zOff = wallZOffset;
             }
-            // --- PUERTA CERRADA (también acepta "door" viejo) ---
             else if (e.type == "door" || e.type == "door_closed")
             {
                 if (isVerticalEdge && doorClosedVerticalPrefab != null)
@@ -490,7 +479,6 @@ public class FloorLoader : MonoBehaviour
                 xOff = doorXOffset;
                 zOff = doorZOffset;
             }
-            // --- PUERTA ABIERTA ---
             else if (e.type == "door_open")
             {
                 if (isVerticalEdge && doorOpenVerticalPrefab != null)
@@ -558,31 +546,25 @@ public class FloorLoader : MonoBehaviour
         }
     }
 
-    // ----------------- HELPERS PARA PREFABS DE AGENTES / VÍCTIMAS -----------------
+    // ----------------- HELPERS PREFABS -----------------
 
     GameObject GetFirefighterPrefabForAgent(AgentData agent)
     {
-        // 1) Si tienes lista de varios modelos, asigna uno por ID
         if (firefighterPrefabs != null && firefighterPrefabs.Length > 0)
         {
             int idx = Mathf.Abs(agent.id) % firefighterPrefabs.Length;
             return firefighterPrefabs[idx];
         }
-
-        // 2) Si no hay lista, usa el prefab único de siempre
         return firefighterPrefab;
     }
 
-    GameObject GetVictimPrefabForIndex(int index)
+    GameObject GetVictimPrefabForKey(string key)
     {
-        // 1) Si hay varias víctimas, asigna según índice
         if (victimPrefabs != null && victimPrefabs.Length > 0)
         {
-            int idx = index % victimPrefabs.Length;
+            int idx = Mathf.Abs(key.GetHashCode()) % victimPrefabs.Length;
             return victimPrefabs[idx];
         }
-
-        // 2) Si no, usa la víctima default
         return victimPrefab;
     }
 
@@ -626,27 +608,55 @@ public class FloorLoader : MonoBehaviour
     // ----------------- VÍCTIMAS -----------------
     void RebuildVictims(VictimData[] victims)
     {
-        foreach (GameObject v in victimObjects)
-            if (v != null) Destroy(v);
-        victimObjects.Clear();
+        // Conjunto de keys que vienen este step
+        HashSet<string> newKeys = new HashSet<string>();
 
-        if (victims == null) return;
-
-        for (int i = 0; i < victims.Length; i++)
+        if (victims != null)
         {
-            VictimData v = victims[i];
+            foreach (var v in victims)
+            {
+                string key = v.x.ToString() + "_" + v.y.ToString();
+                newKeys.Add(key);
 
-            GameObject prefabToUse = GetVictimPrefabForIndex(i);
-            if (prefabToUse == null) continue;
+                // Posición en grid (aplicando espejo para el mundo)
+                int gx = v.x;
+                int gy = v.y;
+                if (mirrorX) gx = (mapWidth - 1) - gx;
+                if (mirrorZ) gy = (mapHeight - 1) - gy;
 
-            int gx = v.x;
-            int gy = v.y;
-            if (mirrorX) gx = (mapWidth - 1) - gx;
-            if (mirrorZ) gy = (mapHeight - 1) - gy;
+                Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0);
 
-            Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0);
-            GameObject inst = Instantiate(prefabToUse, pos, prefabToUse.transform.rotation, this.transform);
-            victimObjects.Add(inst);
+                GameObject go;
+                if (!victimObjects.TryGetValue(key, out go))
+                {
+                    // Víctima nueva → elegimos skin solo UNA vez
+                    GameObject prefabToUse = GetVictimPrefabForKey(key);
+                    if (prefabToUse == null) continue;
+
+                    go = Instantiate(prefabToUse, pos, prefabToUse.transform.rotation, this.transform);
+                    victimObjects[key] = go;
+                }
+                else
+                {
+                    // Víctima ya existente → solo actualizamos posición
+                    go.transform.position = pos;
+                }
+            }
+        }
+
+        // Destruir víctimas que ya no vienen en el JSON (muertas / rescatadas)
+        List<string> toRemove = new List<string>();
+        foreach (var kv in victimObjects)
+        {
+            if (!newKeys.Contains(kv.Key))
+            {
+                if (kv.Value != null) Destroy(kv.Value);
+                toRemove.Add(kv.Key);
+            }
+        }
+        foreach (var k in toRemove)
+        {
+            victimObjects.Remove(k);
         }
     }
 
