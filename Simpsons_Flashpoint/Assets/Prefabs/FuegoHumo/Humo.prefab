@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5644133064174452605, guid: 1c16fd2600a35420fb814ba1b4d53635, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ab4efb5a7cb487740b474600696fc6a3, type: 2}
     - target: {fileID: 8128668236925612103, guid: 1c16fd2600a35420fb814ba1b4d53635, type: 3}
       propertyPath: m_Name
       value: Humo

@@ -1808,7 +1808,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 22.12, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10520,11 +10520,18 @@ MonoBehaviour:
   doorHorizontalPrefab: {fileID: 6976447179347693418, guid: 81f47cb7b6bf14b4e8d6d800668e609a, type: 3}
   firePrefab: {fileID: 372944543441286733, guid: fa2d0d55cd8f343f5bb2ba31c97c6ca9, type: 3}
   smokePrefab: {fileID: 6412148075087961985, guid: a134ec58895de46a1a56797f9331245c, type: 3}
+  fireXOffset: 0.25
+  fireYOffset: -0.5
+  fireZOffset: 0.6
+  smokeXOffset: 0
+  smokeYOffset: 0.05
+  smokeZOffset: 0
   firefighterPrefab: {fileID: 7284877703619247442, guid: 9669039acc51246cb9fbe6fbbc9e2286, type: 3}
   victimPrefab: {fileID: 1188049462}
   cellSize: 1
   yLevel: 0
   originOffset: {x: 90, y: 0, z: 0}
+  wallHeight: 2
   mirrorX: 1
   mirrorZ: 0
 --- !u!4 &1864155191

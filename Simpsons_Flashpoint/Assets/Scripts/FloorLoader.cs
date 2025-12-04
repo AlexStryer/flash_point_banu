@@ -97,6 +97,14 @@ public class FloorLoader : MonoBehaviour
     public GameObject firePrefab;
     public GameObject smokePrefab;
 
+    [Header("Hazards config")]
+    public float fireXOffset = 0f;
+    public float fireYOffset = 0.05f;
+    public float fireZOffset = 0f;
+    public float smokeXOffset = 0f;
+    public float smokeYOffset = 0.05f;
+    public float smokeZOffset = 0f;
+
     [Header("Prefabs - Entidades")]
     public GameObject firefighterPrefab;
     public GameObject victimPrefab;
@@ -106,6 +114,9 @@ public class FloorLoader : MonoBehaviour
     public float cellSize = 1f;
     public float yLevel = 0f;
     public Vector3 originOffset = Vector3.zero;
+
+    [Header("Walls config")]
+    public float wallHeight = 2f;   // altura de la pared en unidades del mundo
 
     [Header("Orientation")]
     public bool mirrorX = true;
@@ -200,7 +211,7 @@ public class FloorLoader : MonoBehaviour
             mapHeight = step.height;
 
             BuildHazardsFromArray(step.hazards);
-            UpdateAgents(step.agents, clearExisting:false);
+            UpdateAgents(step.agents, clearExisting: false);
             RebuildVictims(step.victims);
 
             if (step.game_over)
@@ -227,7 +238,7 @@ public class FloorLoader : MonoBehaviour
         BuildTiles(floor);
         BuildEdges(floor);
         BuildHazardsFromArray(floor.hazards);
-        UpdateAgents(floor.agents, clearExisting:true);
+        UpdateAgents(floor.agents, clearExisting: true);
         RebuildVictims(floor.victims);
     }
 
@@ -290,10 +301,11 @@ public class FloorLoader : MonoBehaviour
             int bx = e.bx;
             int by = e.by;
 
+            // espejos
             if (mirrorX)
             {
-                ax = (floor.width - 1) - ax;
-                bx = (floor.width - 1) - bx;
+                ax = (floor.width  - 1) - ax;
+                bx = (floor.width  - 1) - bx;
             }
             if (mirrorZ)
             {
@@ -301,24 +313,32 @@ public class FloorLoader : MonoBehaviour
                 by = (floor.height - 1) - by;
             }
 
-            bool isVerticalEdge = (ax != bx);
-            bool isHorizontalEdge = (ay != by);
+            // centro entre las dos celdas usando la MISMA conversión que todo lo demás
+            Vector3 a = GridToWorld(ax, ay);
+            Vector3 b = GridToWorld(bx, by);
+            Vector3 pos = (a + b) * 0.5f;
 
-            float cx = ((ax + bx) * 0.5f) * cellSize + cellSize * 0.5f;
-            float cz = ((ay + by) * 0.5f) * cellSize + cellSize * 0.5f;
-            Vector3 pos = new Vector3(cx, yLevel, cz) + originOffset;
+            // levantar la pared media altura, porque el pivot está en el centro
+            pos += new Vector3(0f, wallHeight / 2f, 0f);
+
+            bool isVerticalEdge   = (ax != bx);
+            bool isHorizontalEdge = (ay != by);
 
             GameObject prefab = null;
 
             if (e.type == "wall")
             {
-                if (isVerticalEdge && wallVerticalPrefab != null) prefab = wallVerticalPrefab;
-                else if (isHorizontalEdge && wallHorizontalPrefab != null) prefab = wallHorizontalPrefab;
+                if (isVerticalEdge && wallVerticalPrefab != null)
+                    prefab = wallVerticalPrefab;
+                else if (isHorizontalEdge && wallHorizontalPrefab != null)
+                    prefab = wallHorizontalPrefab;
             }
             else if (e.type == "door")
             {
-                if (isVerticalEdge && doorVerticalPrefab != null) prefab = doorVerticalPrefab;
-                else if (isHorizontalEdge && doorHorizontalPrefab != null) prefab = doorHorizontalPrefab;
+                if (isVerticalEdge && doorVerticalPrefab != null)
+                    prefab = doorVerticalPrefab;
+                else if (isHorizontalEdge && doorHorizontalPrefab != null)
+                    prefab = doorHorizontalPrefab;
             }
 
             if (prefab == null) continue;
@@ -339,16 +359,37 @@ public class FloorLoader : MonoBehaviour
         foreach (HazardData h in hazards)
         {
             GameObject prefab = null;
-            if (h.kind == "fire" && firePrefab != null) prefab = firePrefab;
-            else if (h.kind == "smoke" && smokePrefab != null) prefab = smokePrefab;
+            float xOffset = 0f;
+            float yOffset = 0f;
+            float zOffset = 0f;
+
+            if (h.kind == "fire" && firePrefab != null)
+            {
+                prefab = firePrefab;
+                xOffset = fireXOffset;
+                yOffset = fireYOffset;
+                zOffset = fireZOffset;
+            }
+            else if (h.kind == "smoke" && smokePrefab != null)
+            {
+                prefab = smokePrefab;
+                xOffset = smokeXOffset;
+                yOffset = smokeYOffset;
+                zOffset = smokeZOffset;
+            }
+
             if (prefab == null) continue;
 
             int gx = h.x;
             int gy = h.y;
+
+            // MISMA lógica de espejos que tiles / agentes
             if (mirrorX) gx = (mapWidth - 1) - gx;
             if (mirrorZ) gy = (mapHeight - 1) - gy;
 
-            Vector3 pos = GridToWorld(gx, gy);
+            // MISMO GridToWorld que el piso + offsets finos
+            Vector3 pos = GridToWorld(gx, gy) + new Vector3(xOffset, yOffset, zOffset);
+
             GameObject inst = Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
             activeHazards.Add(inst);
         }
