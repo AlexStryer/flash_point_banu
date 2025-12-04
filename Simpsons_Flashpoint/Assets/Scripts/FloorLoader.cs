@@ -39,6 +39,9 @@ public class AgentData
     public int id;
     public int x;
     public int y;
+
+    // Opcional: si en tu JSON ya mandas "role" se llenará solo
+    public string role;
 }
 
 [Serializable]
@@ -166,9 +169,17 @@ public class FloorLoader : MonoBehaviour
     public float smokeYOffset = 0.05f;
     public float smokeZOffset = 0f;
 
-    [Header("Prefabs - Entidades")]
-    public GameObject firefighterPrefab;
-    public GameObject victimPrefab;
+    [Header("Prefabs - Bomberos (multi-modelo)")]
+    [Tooltip("Prefab default si no quieres usar lista múltiple")]
+    public GameObject firefighterPrefab;                  // fallback
+    [Tooltip("Pon aquí varios modelos: Homero, Marge, Bart, etc.")]
+    public GameObject[] firefighterPrefabs;               // varios modelos
+
+    [Header("Prefabs - Víctimas (multi-skin)")]
+    [Tooltip("Prefab default de víctima")]
+    public GameObject victimPrefab;                       // fallback
+    [Tooltip("Lista de prefabs para víctimas con distintas skins")]
+    public GameObject[] victimPrefabs;                    // varios modelos
 
     [Header("Grid config")]
     public float cellSize = 1f;
@@ -547,6 +558,34 @@ public class FloorLoader : MonoBehaviour
         }
     }
 
+    // ----------------- HELPERS PARA PREFABS DE AGENTES / VÍCTIMAS -----------------
+
+    GameObject GetFirefighterPrefabForAgent(AgentData agent)
+    {
+        // 1) Si tienes lista de varios modelos, asigna uno por ID
+        if (firefighterPrefabs != null && firefighterPrefabs.Length > 0)
+        {
+            int idx = Mathf.Abs(agent.id) % firefighterPrefabs.Length;
+            return firefighterPrefabs[idx];
+        }
+
+        // 2) Si no hay lista, usa el prefab único de siempre
+        return firefighterPrefab;
+    }
+
+    GameObject GetVictimPrefabForIndex(int index)
+    {
+        // 1) Si hay varias víctimas, asigna según índice
+        if (victimPrefabs != null && victimPrefabs.Length > 0)
+        {
+            int idx = index % victimPrefabs.Length;
+            return victimPrefabs[idx];
+        }
+
+        // 2) Si no, usa la víctima default
+        return victimPrefab;
+    }
+
     // ----------------- AGENTES -----------------
     void UpdateAgents(AgentData[] agents, bool clearExisting)
     {
@@ -571,8 +610,10 @@ public class FloorLoader : MonoBehaviour
             GameObject go;
             if (!agentObjects.TryGetValue(a.id, out go))
             {
-                if (firefighterPrefab == null) continue;
-                go = Instantiate(firefighterPrefab, pos, firefighterPrefab.transform.rotation, this.transform);
+                GameObject prefabToUse = GetFirefighterPrefabForAgent(a);
+                if (prefabToUse == null) continue;
+
+                go = Instantiate(prefabToUse, pos, prefabToUse.transform.rotation, this.transform);
                 agentObjects[a.id] = go;
             }
             else
@@ -591,9 +632,12 @@ public class FloorLoader : MonoBehaviour
 
         if (victims == null) return;
 
-        foreach (VictimData v in victims)
+        for (int i = 0; i < victims.Length; i++)
         {
-            if (victimPrefab == null) continue;
+            VictimData v = victims[i];
+
+            GameObject prefabToUse = GetVictimPrefabForIndex(i);
+            if (prefabToUse == null) continue;
 
             int gx = v.x;
             int gy = v.y;
@@ -601,7 +645,7 @@ public class FloorLoader : MonoBehaviour
             if (mirrorZ) gy = (mapHeight - 1) - gy;
 
             Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0);
-            GameObject inst = Instantiate(victimPrefab, pos, victimPrefab.transform.rotation, this.transform);
+            GameObject inst = Instantiate(prefabToUse, pos, prefabToUse.transform.rotation, this.transform);
             victimObjects.Add(inst);
         }
     }
