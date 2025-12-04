@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.InputSystem;   // New Input System
 
+// ----------------- DATA CLASSES -----------------
+
 [Serializable]
 public class TileData
 {
@@ -46,6 +48,32 @@ public class VictimData
     public int y;
 }
 
+// --- Stats por episodio (un solo juego) ---
+[Serializable]
+public class EpisodeStats
+{
+    public int victims_rescued;
+    public int victims_picked;
+    public int fires_extinguished;
+    public int smokes_extinguished;
+    public int doors_opened;
+    public int action_points;
+}
+
+// --- Stats totales acumuladas de todos los episodios ---
+[Serializable]
+public class TotalStats
+{
+    public int victims_rescued;
+    public int victims_picked;
+    public int fires_extinguished;
+    public int smokes_extinguished;
+    public int doors_opened;
+    public int action_points;
+}
+
+// ----------------- RESPUESTAS HTTP -----------------
+
 [Serializable]
 public class FloorResponse
 {
@@ -58,6 +86,18 @@ public class FloorResponse
     public VictimData[] victims;
     public bool game_over;
     public string result;
+
+    // Campos extra que el server manda en /floor (opcionales)
+    public int episode;
+    public int wins;
+    public int losses;
+    public int others;
+    public int current_seed;
+    public int max_episodes;
+    public bool simulation_done;
+    public bool episode_finished;
+    public EpisodeStats episode_stats;
+    public TotalStats total_stats;
 }
 
 [Serializable]
@@ -71,7 +111,21 @@ public class StepResponse
     public VictimData[] victims;
     public bool game_over;
     public string result;
+
+    // Campos extra de multi-episodios y estadísticas
+    public int episode;
+    public int wins;
+    public int losses;
+    public int others;
+    public int current_seed;
+    public int max_episodes;
+    public bool simulation_done;
+    public bool episode_finished;
+    public EpisodeStats episode_stats;
+    public TotalStats total_stats;
 }
+
+// ----------------- FLOOR LOADER -----------------
 
 public class FloorLoader : MonoBehaviour
 {
@@ -148,6 +202,9 @@ public class FloorLoader : MonoBehaviour
     List<GameObject> victimObjects = new List<GameObject>();
     List<GameObject> activeEdges = new List<GameObject>();
 
+    // flag para dejar de pedir /step cuando ya acabaron todos los episodios
+    bool simulationFinished = false;
+
     void Start()
     {
         StartCoroutine(RequestFloorLayout(897));
@@ -155,6 +212,9 @@ public class FloorLoader : MonoBehaviour
 
     void Update()
     {
+        if (simulationFinished)
+            return;
+
         if (Keyboard.current != null &&
             Keyboard.current.spaceKey.wasPressedThisFrame)
         {
@@ -190,6 +250,22 @@ public class FloorLoader : MonoBehaviour
             {
                 Debug.LogError("No se pudo parsear el JSON de /floor");
                 yield break;
+            }
+
+            simulationFinished = floor.simulation_done;
+
+            Debug.Log($"[FLOOR] Episodio {floor.episode}/{floor.max_episodes} - " +
+                      $"Wins: {floor.wins}, Losses: {floor.losses}, Others: {floor.others}");
+
+            if (floor.total_stats != null)
+            {
+                Debug.Log($"[FLOOR] Totales: " +
+                          $"VR={floor.total_stats.victims_rescued}, " +
+                          $"VP={floor.total_stats.victims_picked}, " +
+                          $"F={floor.total_stats.fires_extinguished}, " +
+                          $"S={floor.total_stats.smokes_extinguished}, " +
+                          $"D={floor.total_stats.doors_opened}, " +
+                          $"AP={floor.total_stats.action_points}");
             }
 
             BuildFromResponse(floor);
@@ -232,9 +308,41 @@ public class FloorLoader : MonoBehaviour
             UpdateAgents(step.agents, clearExisting: false);
             RebuildVictims(step.victims);
 
+            // Log de stats de simulación / episodios
+            Debug.Log($"[STEP] Episodio {step.episode}/{step.max_episodes} - " +
+                      $"Wins: {step.wins}, Losses: {step.losses}, Others: {step.others}");
+
+            if (step.episode_finished && step.episode_stats != null)
+            {
+                Debug.Log($"[STEP] Episodio terminado. Stats: " +
+                          $"VR={step.episode_stats.victims_rescued}, " +
+                          $"VP={step.episode_stats.victims_picked}, " +
+                          $"F={step.episode_stats.fires_extinguished}, " +
+                          $"S={step.episode_stats.smokes_extinguished}, " +
+                          $"D={step.episode_stats.doors_opened}, " +
+                          $"AP={step.episode_stats.action_points}");
+            }
+
+            if (step.total_stats != null)
+            {
+                Debug.Log($"[STEP] Totales acumulados: " +
+                          $"VR={step.total_stats.victims_rescued}, " +
+                          $"VP={step.total_stats.victims_picked}, " +
+                          $"F={step.total_stats.fires_extinguished}, " +
+                          $"S={step.total_stats.smokes_extinguished}, " +
+                          $"D={step.total_stats.doors_opened}, " +
+                          $"AP={step.total_stats.action_points}");
+            }
+
+            if (step.simulation_done)
+            {
+                simulationFinished = true;
+                Debug.Log("[STEP] Simulación COMPLETA, ya no se piden más pasos.");
+            }
+
             if (step.game_over)
             {
-                Debug.Log($"GAME OVER: {step.result}");
+                Debug.Log($"GAME OVER (episodio {step.episode}): {step.result}");
             }
         }
     }
@@ -308,8 +416,7 @@ public class FloorLoader : MonoBehaviour
     }
 
     // ----------------- PAREDES / PUERTAS -----------------
-    // ----------------- PAREDES / PUERTAS -----------------
-void BuildEdges(int width, int height, EdgeData[] edges)
+    void BuildEdges(int width, int height, EdgeData[] edges)
     {
         foreach (GameObject go in activeEdges)
             if (go != null) Destroy(go);
@@ -393,7 +500,6 @@ void BuildEdges(int width, int height, EdgeData[] edges)
             activeEdges.Add(inst);
         }
     }
-
 
     // ----------------- HAZARDS -----------------
     void BuildHazardsFromArray(HazardData[] hazards)
