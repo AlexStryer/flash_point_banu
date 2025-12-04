@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5644133064174452605, guid: 7483d1ab51acb4fe29c9934beb2e9e2d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ebc4be8b15515424b8d735ed98ce744e, type: 2}
     - target: {fileID: 8128668236925612103, guid: 7483d1ab51acb4fe29c9934beb2e9e2d, type: 3}
       propertyPath: m_Name
       value: KrustySize

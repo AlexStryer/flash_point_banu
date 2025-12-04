@@ -20,7 +20,7 @@ public class EdgeData
     public int ay;
     public int bx;
     public int by;
-    public string type; // "wall" o "door"
+    public string type; // "wall", "door_closed", "door_open"
 }
 
 [Serializable]
@@ -65,6 +65,7 @@ public class StepResponse
 {
     public int width;
     public int height;
+    public EdgeData[] edges;
     public HazardData[] hazards;
     public AgentData[] agents;
     public VictimData[] victims;
@@ -87,11 +88,17 @@ public class FloorLoader : MonoBehaviour
     public GameObject safeFloorPrefab;
     public GameObject spawnFloorPrefab;
 
-    [Header("Prefabs - Paredes y Puertas")]
+    [Header("Prefabs - Paredes")]
     public GameObject wallVerticalPrefab;
     public GameObject wallHorizontalPrefab;
-    public GameObject doorVerticalPrefab;
-    public GameObject doorHorizontalPrefab;
+
+    [Header("Prefabs - Puertas cerradas")]
+    public GameObject doorClosedVerticalPrefab;
+    public GameObject doorClosedHorizontalPrefab;
+
+    [Header("Prefabs - Puertas abiertas")]
+    public GameObject doorOpenVerticalPrefab;
+    public GameObject doorOpenHorizontalPrefab;
 
     [Header("Prefabs - Hazards")]
     public GameObject firePrefab;
@@ -108,7 +115,6 @@ public class FloorLoader : MonoBehaviour
     [Header("Prefabs - Entidades")]
     public GameObject firefighterPrefab;
     public GameObject victimPrefab;
-    // (si quieres ambulancia después, la agregas aquí)
 
     [Header("Grid config")]
     public float cellSize = 1f;
@@ -116,7 +122,18 @@ public class FloorLoader : MonoBehaviour
     public Vector3 originOffset = Vector3.zero;
 
     [Header("Walls config")]
-    public float wallHeight = 2f;   // altura de la pared en unidades del mundo
+    public float wallHeight = 2f;   // altura visual de pared
+    public float doorHeight = 2f;   // altura visual de puerta
+
+    [Header("Walls offset (extra)")]
+    public float wallXOffset = 0f;
+    public float wallYOffset = 0f;
+    public float wallZOffset = 0f;
+
+    [Header("Doors offset (extra)")]
+    public float doorXOffset = 0f;
+    public float doorYOffset = 0f;
+    public float doorZOffset = 0f;
 
     [Header("Orientation")]
     public bool mirrorX = true;
@@ -129,6 +146,7 @@ public class FloorLoader : MonoBehaviour
     List<GameObject> activeHazards = new List<GameObject>();
     Dictionary<int, GameObject> agentObjects = new Dictionary<int, GameObject>();
     List<GameObject> victimObjects = new List<GameObject>();
+    List<GameObject> activeEdges = new List<GameObject>();
 
     void Start()
     {
@@ -137,7 +155,6 @@ public class FloorLoader : MonoBehaviour
 
     void Update()
     {
-        // Avanzar turno con Space usando New Input System
         if (Keyboard.current != null &&
             Keyboard.current.spaceKey.wasPressedThisFrame)
         {
@@ -210,6 +227,7 @@ public class FloorLoader : MonoBehaviour
             mapWidth = step.width;
             mapHeight = step.height;
 
+            BuildEdges(step.width, step.height, step.edges);
             BuildHazardsFromArray(step.hazards);
             UpdateAgents(step.agents, clearExisting: false);
             RebuildVictims(step.victims);
@@ -227,16 +245,16 @@ public class FloorLoader : MonoBehaviour
         mapWidth = floor.width;
         mapHeight = floor.height;
 
-        // Limpia todo lo que cuelga de este objeto
         for (int i = transform.childCount - 1; i >= 0; i--)
             DestroyImmediate(transform.GetChild(i).gameObject);
 
         activeHazards.Clear();
         agentObjects.Clear();
         victimObjects.Clear();
+        activeEdges.Clear();
 
         BuildTiles(floor);
-        BuildEdges(floor);
+        BuildEdges(floor.width, floor.height, floor.edges);
         BuildHazardsFromArray(floor.hazards);
         UpdateAgents(floor.agents, clearExisting: true);
         RebuildVictims(floor.victims);
@@ -290,62 +308,92 @@ public class FloorLoader : MonoBehaviour
     }
 
     // ----------------- PAREDES / PUERTAS -----------------
-    void BuildEdges(FloorResponse floor)
+    // ----------------- PAREDES / PUERTAS -----------------
+void BuildEdges(int width, int height, EdgeData[] edges)
     {
-        if (floor.edges == null) return;
+        foreach (GameObject go in activeEdges)
+            if (go != null) Destroy(go);
+        activeEdges.Clear();
 
-        foreach (EdgeData e in floor.edges)
+        if (edges == null) return;
+
+        foreach (EdgeData e in edges)
         {
             int ax = e.ax;
             int ay = e.ay;
             int bx = e.bx;
             int by = e.by;
 
-            // espejos
             if (mirrorX)
             {
-                ax = (floor.width  - 1) - ax;
-                bx = (floor.width  - 1) - bx;
+                ax = (width  - 1) - ax;
+                bx = (width  - 1) - bx;
             }
             if (mirrorZ)
             {
-                ay = (floor.height - 1) - ay;
-                by = (floor.height - 1) - by;
+                ay = (height - 1) - ay;
+                by = (height - 1) - by;
             }
 
-            // centro entre las dos celdas usando la MISMA conversión que todo lo demás
             Vector3 a = GridToWorld(ax, ay);
             Vector3 b = GridToWorld(bx, by);
             Vector3 pos = (a + b) * 0.5f;
-
-            // levantar la pared media altura, porque el pivot está en el centro
-            pos += new Vector3(0f, wallHeight / 2f, 0f);
 
             bool isVerticalEdge   = (ax != bx);
             bool isHorizontalEdge = (ay != by);
 
             GameObject prefab = null;
 
+            float xOff = 0f;
+            float yOff = 0f;
+            float zOff = 0f;
+
+            // --- PARED ---
             if (e.type == "wall")
             {
                 if (isVerticalEdge && wallVerticalPrefab != null)
                     prefab = wallVerticalPrefab;
                 else if (isHorizontalEdge && wallHorizontalPrefab != null)
                     prefab = wallHorizontalPrefab;
+
+                yOff = wallHeight / 2f + wallYOffset;
+                xOff = wallXOffset;
+                zOff = wallZOffset;
             }
-            else if (e.type == "door")
+            // --- PUERTA CERRADA (también acepta "door" viejo) ---
+            else if (e.type == "door" || e.type == "door_closed")
             {
-                if (isVerticalEdge && doorVerticalPrefab != null)
-                    prefab = doorVerticalPrefab;
-                else if (isHorizontalEdge && doorHorizontalPrefab != null)
-                    prefab = doorHorizontalPrefab;
+                if (isVerticalEdge && doorClosedVerticalPrefab != null)
+                    prefab = doorClosedVerticalPrefab;
+                else if (isHorizontalEdge && doorClosedHorizontalPrefab != null)
+                    prefab = doorClosedHorizontalPrefab;
+
+                yOff = doorHeight / 2f + doorYOffset;
+                xOff = doorXOffset;
+                zOff = doorZOffset;
+            }
+            // --- PUERTA ABIERTA ---
+            else if (e.type == "door_open")
+            {
+                if (isVerticalEdge && doorOpenVerticalPrefab != null)
+                    prefab = doorOpenVerticalPrefab;
+                else if (isHorizontalEdge && doorOpenHorizontalPrefab != null)
+                    prefab = doorOpenHorizontalPrefab;
+
+                yOff = doorHeight / 2f + doorYOffset;
+                xOff = doorXOffset;
+                zOff = doorZOffset;
             }
 
             if (prefab == null) continue;
 
-            Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
+            pos += new Vector3(xOff, yOff, zOff);
+
+            GameObject inst = Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
+            activeEdges.Add(inst);
         }
     }
+
 
     // ----------------- HAZARDS -----------------
     void BuildHazardsFromArray(HazardData[] hazards)
@@ -383,11 +431,9 @@ public class FloorLoader : MonoBehaviour
             int gx = h.x;
             int gy = h.y;
 
-            // MISMA lógica de espejos que tiles / agentes
             if (mirrorX) gx = (mapWidth - 1) - gx;
             if (mirrorZ) gy = (mapHeight - 1) - gy;
 
-            // MISMO GridToWorld que el piso + offsets finos
             Vector3 pos = GridToWorld(gx, gy) + new Vector3(xOffset, yOffset, zOffset);
 
             GameObject inst = Instantiate(prefab, pos, prefab.transform.rotation, this.transform);
@@ -414,7 +460,7 @@ public class FloorLoader : MonoBehaviour
             if (mirrorX) gx = (mapWidth - 1) - gx;
             if (mirrorZ) gy = (mapHeight - 1) - gy;
 
-            Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0); // un poco arriba del piso
+            Vector3 pos = GridToWorld(gx, gy) + new Vector3(0, 0.05f, 0);
 
             GameObject go;
             if (!agentObjects.TryGetValue(a.id, out go))
