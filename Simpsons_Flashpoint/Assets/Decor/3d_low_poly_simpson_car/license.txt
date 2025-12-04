@@ -1,0 +1,11 @@
+Model Information:
+* title:	3D Low Poly Simpson Car
+* source:	https://sketchfab.com/3d-models/3d-low-poly-simpson-car-a8f411c5f999478f9e434f4b9f2a4d1a
+* author:	Cajetan (https://sketchfab.com/Cajetan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3D Low Poly Simpson Car" (https://sketchfab.com/3d-models/3d-low-poly-simpson-car-a8f411c5f999478f9e434f4b9f2a4d1a) by Cajetan (https://sketchfab.com/Cajetan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

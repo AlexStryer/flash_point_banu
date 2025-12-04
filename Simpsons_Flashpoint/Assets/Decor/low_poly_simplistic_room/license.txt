@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Simplistic Room
+* source:	https://sketchfab.com/3d-models/low-poly-simplistic-room-435dacb3be8746378cad27f0f2bab25d
+* author:	Bubble3D (https://sketchfab.com/Bubble3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Simplistic Room" (https://sketchfab.com/3d-models/low-poly-simplistic-room-435dacb3be8746378cad27f0f2bab25d) by Bubble3D (https://sketchfab.com/Bubble3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

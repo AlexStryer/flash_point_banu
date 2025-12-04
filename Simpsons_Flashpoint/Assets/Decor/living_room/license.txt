@@ -1,0 +1,11 @@
+Model Information:
+* title:	Living Room
+* source:	https://sketchfab.com/3d-models/living-room-9ac3a0b8c34640c5b1eef37b1bcd76a3
+* author:	Blender Strokes (https://sketchfab.com/blenderstrokes3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Living Room" (https://sketchfab.com/3d-models/living-room-9ac3a0b8c34640c5b1eef37b1bcd76a3) by Blender Strokes (https://sketchfab.com/blenderstrokes3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

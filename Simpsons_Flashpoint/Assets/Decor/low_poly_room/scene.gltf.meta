@@ -1,0 +1,76 @@
+fileFormatVersion: 2
+guid: 58cec5ca93969ef4e90036628bd58761
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Decor\low_poly_room\tf.bin
+    assetPath: Assets\Decor\low_poly_room\tf.bin
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\Material_baseColor.png
+    assetPath: Assets\Decor\low_poly_room\textures\Material_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\Tumblr_autumn_forest_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\Tumblr_autumn_forest_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_8_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_8_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_7_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_7_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_6_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_6_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\Area_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\Area_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_4_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_4_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_3_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_3_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_2_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_2_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_1_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_1_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\Indie_art_baseColor.png
+    assetPath: Assets\Decor\low_poly_room\textures\Indie_art_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\paris_vintage_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\paris_vintage_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\vintage_butterfly_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\vintage_butterfly_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\apple_logo_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\apple_logo_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Decor\low_poly_room\textures\mac_wallpaper_baseColor.jpeg
+    assetPath: Assets\Decor\low_poly_room\textures\mac_wallpaper_baseColor.jpeg
+  reportItems: []
