@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Simpson's Living Room
+* source:	https://sketchfab.com/3d-models/the-simpsons-living-room-24f9058a77ef4f9ab172d6d06954bc82
+* author:	cyanarion (https://sketchfab.com/cyanarion)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Simpson's Living Room" (https://sketchfab.com/3d-models/the-simpsons-living-room-24f9058a77ef4f9ab172d6d06954bc82) by cyanarion (https://sketchfab.com/cyanarion) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 765887dc961c4524f83ff9f25647e1ee
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\scene.bin
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\scene.bin
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.001_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.001_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.002_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.002_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.003_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.003_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.004_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.004_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.005_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.005_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.006_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.006_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.007_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.007_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.009_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.009_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.012_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.012_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.013_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.013_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.014_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.014_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.015_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.015_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.016_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.016_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.018_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.018_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.017_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.017_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.019_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.019_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.020_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.020_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.021_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.021_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.022_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.022_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.023_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.023_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.024_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.024_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.025_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.025_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.026_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.026_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.027_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.027_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.028_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.028_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.029_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.029_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.030_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.030_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.031_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.031_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.032_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.032_baseColor.png
+  - type: 1
+    originalUri: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.033_baseColor.png
+    assetPath: Assets\Decor\low_poly_furnitures_full_bundle\textures\Material.033_baseColor.png
+  reportItems: []
