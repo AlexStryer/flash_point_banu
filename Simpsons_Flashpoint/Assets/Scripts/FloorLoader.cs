@@ -1,3 +1,15 @@
+"""
+Aviso de AI
+
+Parte del desarrollo de este proyecto fue asistida por herramientas de inteligencia artificial, específicamente ChatGPT (modelo GPT-5, OpenAI, 2025).
+
+La IA fue especialmente útil para apoyar en la construcción del sistema de conexión entre Unity y la API del servidor, resolver errores en la comunicación HTTP, y orientar en la organización del flujo de actualización del mapa (pisos, paredes, agentes, víctimas y hazards). También brindó ayuda puntual para ajustar detalles de sincronización y depuración durante el desarrollo.
+
+Todo el contenido fue posteriormente probado, corregido y adaptado manualmente para asegurar su correcto funcionamiento dentro de Unity.
+
+OpenAI. (2025). ChatGPT (versión GPT-5). Recuperado de https://chat.openai.com/ 
+"""
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
